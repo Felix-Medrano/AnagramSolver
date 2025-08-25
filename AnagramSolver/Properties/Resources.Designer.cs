@@ -158,5 +158,78 @@ namespace AnagramSolver.Properties {
                 return ResourceManager.GetString("en_US", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ABS
+        ///ADN
+        ///ADSL
+        ///Abad
+        ///AbadÃ­a
+        ///Abajo
+        ///AbalÃ¡
+        ///Abancay
+        ///Abanga
+        ///AbapÃ³
+        ///Abasolo
+        ///Abasticos
+        ///Abdullah
+        ///Abedules
+        ///Abejas
+        ///Abejones
+        ///Abejorral
+        ///Abel
+        ///Abelardo
+        ///Abello
+        ///Aberastain
+        ///Abicin
+        ///Aboabo
+        ///Abona
+        ///AbongÃ¡n
+        ///AborlÃ¡n
+        ///Abra
+        ///Abraham
+        ///Abre
+        ///Abreus
+        ///AbriaquÃ­
+        ///Abucay
+        ///Abulug
+        ///Acacias
+        ///Acacoyagua
+        ///AcacÃ­as
+        ///Academia
+        ///Acajete
+        ///Acala
+        ///Acalayong
+        ///Acambay
+        ///Acanceh
+        ///AcandÃ­
+        ///Acapetahua
+        ///Acaponeta
+        ///Acapulco
+        ///Acaricuara
+        ///Acarigua
+        ///AcarÃ­
+        ///Acas
+        ///Acateno
+        ///Acatepec
+        ///Acatic
+        ///AcatlÃ¡n
+        ///Acatzingo
+        ///AcaxochitlÃ¡n
+        ///Acaya
+        ///Acayucan
+        ///Accha
+        ///Accomarca
+        ///Acequia
+        ///Acevedo
+        ///Acha
+        ///Achacachi
+        ///Acha [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string es_MX {
+            get {
+                return ResourceManager.GetString("es_MX", resourceCulture);
+            }
+        }
     }
 }
