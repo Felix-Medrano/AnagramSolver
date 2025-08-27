@@ -6,22 +6,6 @@ namespace AnagramSolver.Lib
   {
 
     #region Strings
-    /// <summary>
-    /// Normalizes a string by removing all whitespace and punctuation characters.
-    /// </summary>
-    /// <param name="input"></param>
-    /// <returns></returns>
-    public static string Normalize(this string input)
-    {
-      if (string.IsNullOrEmpty(input))
-        return string.Empty;
-
-      var normalized = new string(input
-        .Where(c => !char.IsWhiteSpace(c) && !char.IsPunctuation(c))
-        .ToArray());
-
-      return normalized;
-    }
 
     /// <summary>
     /// Converts a string to lower case using invariant culture.
@@ -30,9 +14,6 @@ namespace AnagramSolver.Lib
     /// <returns></returns>
     public static string ToLowCase(this string input)
     {
-      if (string.IsNullOrEmpty(input))
-        return string.Empty;
-
       return input.ToLowerInvariant();
     }
 
@@ -43,13 +24,23 @@ namespace AnagramSolver.Lib
     /// <returns></returns>
     public static string ToSort(this string input)
     {
-      if (string.IsNullOrEmpty(input))
-        return string.Empty;
-
       var sorted = new string(input.OrderBy(c => c).ToArray());
 
       return sorted;
     }
+
+    /// <summary>
+    /// Remove numbers from text
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns></returns>
+    public static string RemoveNumbers(this string input)
+    {
+      return new string(input
+        .Where(c => !char.IsDigit(c))
+        .ToArray());
+    }
+
     #endregion Strings
 
   }

@@ -1,5 +1,5 @@
-﻿using AnagramSolver.Lib;
-using AnagramSolver.Properties;
+﻿using AnagramSolver.Properties;
+using AnagramSolver.TriePattern;
 
 using System;
 using System.Threading.Tasks;
@@ -59,7 +59,23 @@ namespace AnagramSolver.Views
 
     private void button1_Click(object sender, EventArgs e)
     {
-      Console.WriteLine(txtInput.Text.Normalize().ToLower().ToSort());
+      //Stopwatch stopwatch = new Stopwatch();
+      //stopwatch.Start();
+
+      //Console.WriteLine(new ASFunctions().Normalize(txtInput.Text.ToLowCase().ToSort()));
+
+      //stopwatch.Stop();
+
+      //Console.WriteLine($"Time: {stopwatch.ElapsedMilliseconds}");
+
+      Trie trie = new Trie();
+
+      trie.Insert("Hola");
+      trie.Insert("Ho");
+
+      MessageBox.Show(trie.Search("Hola").ToString());
+      MessageBox.Show(trie.Search("Hol").ToString());
+      MessageBox.Show(trie.Search("Ho").ToString());
     }
   }
 }
