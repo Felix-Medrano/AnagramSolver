@@ -1,4 +1,5 @@
-﻿using AnagramSolver.Properties;
+﻿using AnagramSolver.Lib;
+using AnagramSolver.Properties;
 
 using System;
 using System.Threading.Tasks;
@@ -17,12 +18,11 @@ namespace AnagramSolver.Views
 
     private async void Main_Load(object sender, System.EventArgs e)
     {
-      await LoadFile();
+      //await LoadFile();
     }
 
     private async Task LoadFile()
     {
-      //TODO: Opcion para es_MX
       contentFile = Resources.en_US;
       int totalLength = contentFile.Length;
       int chunkSize = totalLength / 100; // Divide into 100 chunks for progress reporting
@@ -55,6 +55,11 @@ namespace AnagramSolver.Views
           bottomBarLblState.Visible = false;
         }
       }
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+      Console.WriteLine(txtInput.Text.Normalize().ToLower().ToSort());
     }
   }
 }
